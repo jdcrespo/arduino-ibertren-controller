@@ -1,0 +1,41 @@
+// Pins D9 and D10 - 15.6 kHz 10bit
+TCCR1A = 0b00000011; // 10bit
+TCCR1B = 0b00001001; // x1 fast pwm
+// Pins D9 and D10 - 7.8 kHz 10bit
+TCCR1A = 0b00000011; // 10bit
+TCCR1B = 0b00000001; // x1 phase correct
+// Pins D9 and D10 - 2 kHz 10bit
+TCCR1A = 0b00000011; // 10bit
+TCCR1B = 0b00001010; // x8 fast pwm
+// Pins D9 and D10 - 977 Hz 10bit
+TCCR1A = 0b00000011; // 10bit
+TCCR1B = 0b00000010; // x8 phase correct
+// Pins D9 and D10 - 244 Hz 10bit
+TCCR1A = 0b00000011; // 10bit
+TCCR1B = 0b00001011; // x64 fast pwm
+// Pins D9 and D10 - 122 Hz 10bit
+TCCR1A = 0b00000011; // 10bit
+TCCR1B = 0b00000011; // x64 phase correct
+// Pins D9 and D10 - 61 Hz 10bit
+TCCR1A = 0b00000011; // 10bit
+TCCR1B = 0b00001100; // x256 fast pwm
+// Pins D9 and D10 - 30 Hz 10bit
+TCCR1A = 0b00000011; // 10bit
+TCCR1B = 0b00000100; // x256 phase correct
+// Pins D9 and D10 - 15 Hz 10bit
+TCCR1A = 0b00000011; // 10bit
+TCCR1B = 0b00001101; // x1024 fast pwm
+// Pins D9 and D10 - 7.5 Hz 10bit
+TCCR1A = 0b00000011; // 10bit
+TCCR1B = 0b00000101; // x1024 phase correct
+
+
+TCCR1B = TCCR1B & B11111000 | B00000001; // set timer 1 divisor to 1 for PWM frequency of 31372.55 Hz
+
+TCCR1B = TCCR1B & B11111000 | B00000010; // for PWM frequency of 3921.16 Hz
+
+TCCR1B = TCCR1B & B11111000 | B00000011; // for PWM frequency of 490.20 Hz (The DEFAULT)
+
+TCCR1B = TCCR1B & B11111000 | B00000100; // for PWM frequency of 122.55 Hz
+
+TCCR1B = TCCR1B & B11111000 | B00000101; // for PWM frequency of 30.64 Hz
