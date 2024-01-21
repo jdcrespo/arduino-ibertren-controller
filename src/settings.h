@@ -5,6 +5,12 @@
     #define POTENTIOMETER_PIN A0
     #define POTENTIOMETER_DEBOUNCE 4
 
+    /* LED INDICATOR PINOUT */
+    #define LED_INDICATOR 12
+
+    /* DIRECTION SWITCH INPUT */
+    #define DIRECTION_SWITCH_PIN 11
+
     /* ROTARY ENCODER PINOUT */
     #define ENCODER_INPUT_A 2
     #define ENCODER_INPUT_B 3
@@ -12,8 +18,8 @@
 
     /* DISPLAY SETTINGS */
     #define DISPLAY_ADDRESS 0x27
-    #define DISPLAY_COLUMNS 16
-    #define DISPLAY_ROWS 2
+    #define DISPLAY_COLUMNS 20
+    #define DISPLAY_ROWS 4
 
     /* L298N PINOUT */
     #define MOTOR_A_EN 9
